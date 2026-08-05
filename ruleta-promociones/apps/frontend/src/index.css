@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* ─── Paleta Bellapelle ─────────────────────────────────── */
+:root {
+  --bp-teal:         #3aaa96;
+  --bp-teal-dark:    #2d8e7c;
+  --bp-teal-mid:     #5dbfae;
+  --bp-teal-light:   #a8ddd4;
+  --bp-teal-faint:   #e0f5f0;
+  --bp-rose:         #e8698a;
+  --bp-rose-light:   #f2bfca;
+  --bp-rose-faint:   #fde8ed;
+  --bp-beige:        #ede9e5;
+  --bp-beige-warm:   #e5dfd9;
+  --bp-white:        #ffffff;
+  --bp-text:         #2c3530;
+  --bp-text-soft:    #5a7069;
+  --bp-text-muted:   #8aa89e;
+
+  /* Aliases funcionales */
+  --primary:         var(--bp-teal);
+  --primary-dark:    var(--bp-teal-dark);
+  --accent:          var(--bp-rose);
+
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--bp-text);
+  color-scheme: light;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bp-beige);
+  /* Fondo orgánico: blobs suaves en las esquinas, fiel al flyer */
+  background-image:
+    radial-gradient(ellipse 55% 60% at 95% 5%, rgba(58,170,150,0.13) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 55% at 5% 95%, rgba(232,105,138,0.10) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 45% at 80% 85%, rgba(242,191,202,0.12) 0%, transparent 70%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+#root {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+/* ─── Botones ───────────────────────────────────────────── */
+button {
+  border-radius: 50px;
+  border: none;
+  padding: 0.85em 2.2em;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0.04em;
+  background: var(--bp-teal);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.22s ease, transform 0.18s ease, box-shadow 0.22s ease;
+  box-shadow: 0 4px 18px rgba(58, 170, 150, 0.28);
+}
+
+button:hover:not(:disabled) {
+  background: var(--bp-teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 24px rgba(58, 170, 150, 0.38);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background: var(--bp-teal-light);
+  color: var(--bp-white);
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.75;
+}
+
+/* ─── Inputs ────────────────────────────────────────────── */
+input {
+  width: 100%;
+  padding: 0.75rem 1.1rem;
+  border-radius: 12px;
+  border: 1.5px solid var(--bp-teal-light);
+  background: var(--bp-white);
+  color: var(--bp-text);
+  font-size: 1rem;
+  font-family: 'Outfit', sans-serif;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: var(--bp-teal);
+  box-shadow: 0 0 0 3px rgba(58, 170, 150, 0.14);
+}
+
+input::placeholder {
+  color: var(--bp-text-muted);
+}
+
+/* ─── Panel base (tarjetas) ─────────────────────────────── */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(58, 170, 150, 0.14);
+  border-radius: 22px;
+  box-shadow:
+    0 2px 8px rgba(44, 53, 48, 0.06),
+    0 8px 32px rgba(58, 170, 150, 0.07);
+  padding: 2.5rem 2.25rem;
+}
