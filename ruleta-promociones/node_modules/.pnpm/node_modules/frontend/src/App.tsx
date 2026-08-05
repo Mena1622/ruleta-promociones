@@ -236,6 +236,7 @@ function App() {
             <div className="prize-won">
               <h3>Has ganado:</h3>
               <p className="prize-name">{prizeWon?.name}</p>
+              <p className="prize-value">Esta promoción equivale a CRC 25.000</p>
             </div>
 
             <div className="user-details">
@@ -279,6 +280,7 @@ function App() {
             <div className="prize-won" style={{ width: '100%' }}>
               <h3>Premio ganado</h3>
               <p className="prize-name">{savedData.prize.name}</p>
+              <p className="prize-value">Esta promoción equivale a CRC 25.000</p>
             </div>
 
             <div className="rules-block" style={{ width: '100%', textAlign: 'left' }}>

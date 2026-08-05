@@ -259,6 +259,15 @@
   line-height: 1.15;
 }
 
+.prize-value {
+  font-size: 0.85rem;
+  color: var(--bp-rose);
+  font-weight: 600;
+  margin: 0.4rem 0 0 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 /* Datos del usuario */
 .user-details {
   text-align: left;
